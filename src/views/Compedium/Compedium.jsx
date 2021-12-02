@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Loader from 'react-loader-spinner';
 import { fetchPokemon } from '../../services/fetchPokemon';
+import PokemonList from '../../components/PokemonList/PokemonList';
 
 export default function Compendium() {
   const [loading, setLoading] = useState(true);
@@ -23,7 +24,8 @@ export default function Compendium() {
   return (
     <>
       <h1>Pokémon Compendium</h1>
-      <p>{pokemon}</p>
+
+      <PokemonList pokedex={pokemon} />
     </>
   );
 }
