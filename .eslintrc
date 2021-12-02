@@ -1,0 +1,21 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "prefer-const": "error",
+    "no-var": "error",
+    "object-shorthand": ["error", "always"],
+    "eol-last": ["error", "always"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "no-console": "warn",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ]
+  }
+}
