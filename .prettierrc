@@ -1,21 +1,10 @@
 {
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier"],
-  "rules": {
-    "no-unused-vars": "warn",
-    "prefer-const": "error",
-    "no-var": "error",
-    "object-shorthand": ["error", "always"],
-    "eol-last": ["error", "always"],
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
-    "no-console": "warn",
-    "indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1
-      }
-    ]
-  }
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "es5",
+  "bracketSpacing": true
 }
+
