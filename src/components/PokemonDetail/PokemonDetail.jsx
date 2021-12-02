@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { BrowserRouter, NavLink } from 'react-router-dom';
 
 export default function PokemonDetail({ pokemon }) {
   const { name, picture, pokedex, shape, typeOne, typeTwo, speed } = pokemon;
@@ -6,20 +7,22 @@ export default function PokemonDetail({ pokemon }) {
   const secondType = typeTwo !== 'NA';
 
   return (
-    <figure aria-label="pokemon">
-      <img src={picture} alt={`${name}`} />
-      <div className="pokemon-detail">
-        <h2>Name: {name}</h2>
-        <p>Link: {pokedex}</p>
-        <p>Shape: {shape}</p>
-        <p>
-          Types:
-          {typeOne}
-          {secondType && `/${typeTwo}`}
-        </p>
-        <p>Speed:{speed}</p>
-      </div>
-    </figure>
+    <BrowserRouter>
+      <figure aria-label="pokemon">
+        <img src={picture} alt={`${name}`} />
+        <div className="pokemon-detail">
+          <h2>Name: {name}</h2>
+          <NavLink to={pokedex}>{name}</NavLink>
+          <p>Shape: {shape}</p>
+          <p>
+            Types:
+            {typeOne}
+            {secondType && `/${typeTwo}`}
+          </p>
+          <p>Speed:{speed}</p>
+        </div>
+      </figure>
+    </BrowserRouter>
   );
 }
 
