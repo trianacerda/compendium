@@ -25,6 +25,13 @@
     "cy": false
   },
   "rules": {
+    "prettier/prettier": [
+      0,
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
     "eqeqeq": ["error", "always"],
     "no-console": "warn",
     "indent": [
