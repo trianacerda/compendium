@@ -5,7 +5,6 @@ export default function PokemonList({ pokedex }) {
   return (
     <ul aria-label="pokemon-list" className="pokemon-List">
       {pokedex.map((pokemon) => {
-        // console.log('pokedex', pokedex);
         return (
           <li className="single-pokemon" key={pokemon.id}>
             <PokemonDetail pokemon={pokemon} />

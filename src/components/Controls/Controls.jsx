@@ -1,8 +1,8 @@
-export default function Controls({ pokemonTypes, selectedType, handleChange }) {
+export default function Controls({ pokemonTypes, selectedType, filterChange }) {
   return (
     <>
       Filter Pokemon By Type:
-      <select value={selectedType} onChange={(e) => handleChange(e.target.value)}>
+      <select value={selectedType} onChange={(e) => filterChange(e.target.value)}>
         <option key="all" value="all">
           All Pokemon
         </option>
