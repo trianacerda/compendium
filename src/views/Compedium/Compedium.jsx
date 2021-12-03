@@ -5,22 +5,22 @@ import { fetchPokemon } from '../../services/fetchPokemon';
 import PokemonList from '../../components/PokemonList/PokemonList';
 
 export default function Compendium() {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
     async function getPokemon() {
       const pokedex = await fetchPokemon();
-      console.log('!!!!!', pokedex);
+      // console.log('!!!!!', pokedex);
       setPokemon(pokedex);
-      // setLoading(false);
+      setLoading(false);
     }
     getPokemon();
   }, []);
 
-  // if (loading) {
-  //   <Loader type="Puff" color="#00BFFF" height={80} width={80} />;
-  // }
+  if (loading) {
+    <Loader type="Puff" color="#00BFFF" height={80} width={80} />;
+  }
 
   return (
     <>
