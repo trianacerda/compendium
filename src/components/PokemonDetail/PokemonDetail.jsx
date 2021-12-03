@@ -1,40 +1,42 @@
 import PropTypes from 'prop-types';
-import { BrowserRouter, NavLink } from 'react-router-dom';
 
 export default function PokemonDetail({ pokemon }) {
-  const { name, picture, pokedex, shape, typeOne, typeTwo, speed } = pokemon;
-
-  const secondType = typeTwo !== 'NA';
+  const secondType = pokemon.type_2 !== 'NA';
+  const secondAbility = pokemon.ability_2 !== 'NA';
 
   return (
-    <BrowserRouter>
-      <figure aria-label="pokemon">
-        <img src={picture} alt={`${name}`} />
-        <div className="pokemon-detail">
-          <h2>Name: {name}</h2>
-          <NavLink to={pokedex}>{name}</NavLink>
-          <p>Shape: {shape}</p>
-          <p>
-            Types:
-            {typeOne}
-            {secondType && `/${typeTwo}`}
-          </p>
-          <p>Speed:{speed}</p>
-        </div>
-      </figure>
-    </BrowserRouter>
+    <figure aria-label="pokemon">
+      <img src={pokemon.url_image} alt={`${pokemon.pokemon}`} />
+      <div className="pokemon-detail">
+        <a href={pokemon.pokedex}>{pokemon.pokemon}</a>
+        <p>
+          Abilities:
+          {pokemon.ability_1}
+          {secondAbility && `/${pokemon.ability_2}`}
+        </p>
+        <p></p>
+        <p>Weight: {pokemon.weight}</p>
+        <p>Shape: {pokemon.shape}</p>
+        <p>
+          Types:
+          {pokemon.type_1}
+          {secondType && `/${pokemon.type_2}`}
+        </p>
+        <p>Speed:{pokemon.speed}</p>
+      </div>
+    </figure>
   );
 }
 
 PokemonDetail.propTypes = {
   pokemon: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
+    url_image: PropTypes.string.isRequired,
     pokedex: PropTypes.string.isRequired,
+    weight: PropTypes.number.isRequired,
     shape: PropTypes.string.isRequired,
-    typeOne: PropTypes.string.isRequired,
-    typeTwo: PropTypes.string.isRequired,
-    speed: PropTypes.string.isRequired,
+    type_1: PropTypes.string.isRequired,
+    type_2: PropTypes.string.isRequired,
+    speed: PropTypes.number.isRequired,
   }).isRequired,
 };

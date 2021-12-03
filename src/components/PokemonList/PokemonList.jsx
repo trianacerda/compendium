@@ -5,7 +5,7 @@ export default function PokemonList({ pokedex }) {
   return (
     <ul aria-label="pokemon-list" className="pokemon-List">
       {pokedex.map((pokemon) => {
-        console.log('pokedex', pokedex);
+        // console.log('pokedex', pokedex);
         return (
           <li className="single-pokemon" key={pokemon.id}>
             <PokemonDetail pokemon={pokemon} />
@@ -16,17 +16,17 @@ export default function PokemonList({ pokedex }) {
   );
 }
 
-PokemonDetail.propTypes = {
+PokemonList.propTypes = {
   pokemon: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-      picture: PropTypes.string.isRequired,
+      url_image: PropTypes.string.isRequired,
       pokedex: PropTypes.string.isRequired,
+      weight: PropTypes.number.isRequired,
       shape: PropTypes.string.isRequired,
-      typeOne: PropTypes.string.isRequired,
-      typeTwo: PropTypes.string.isRequired,
-      speed: PropTypes.string.isRequired,
+      type_1: PropTypes.string.isRequired,
+      type_2: PropTypes.string.isRequired,
+      speed: PropTypes.number.isRequired,
     }).isRequired
   ),
 };
