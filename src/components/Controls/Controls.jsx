@@ -1,4 +1,10 @@
-export default function Controls({ pokemonTypes, selectedType, filterChange }) {
+export default function Controls({
+  pokemonTypes,
+  selectedType,
+  filterChange,
+  sortOrder,
+  sortChange,
+}) {
   return (
     <>
       Filter Pokemon By Type:
@@ -13,6 +19,15 @@ export default function Controls({ pokemonTypes, selectedType, filterChange }) {
             </option>
           );
         })}
+      </select>
+      Sort Order Of Pokemon:
+      <select value={sortOrder} onChange={(e) => sortChange(e.target.value)}>
+        <option key="asc" value="asc">
+          Ascending
+        </option>
+        <option key="desc" value="desc">
+          Descending
+        </option>
       </select>
     </>
   );

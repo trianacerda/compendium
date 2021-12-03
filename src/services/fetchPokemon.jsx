@@ -22,3 +22,14 @@ export const fetchFilteredPokemon = async (type) => {
 
   return filteredPokemon.results;
 };
+
+export const fetchSortedPokemon = async (order) => {
+  const response = await fetch(
+    `  https://pokedex-alchemy.herokuapp.com/api/pokedex?sort=defence&direction=${order}`
+  );
+
+  const sortedPokemon = await response.json();
+  console.log('sorted', sortedPokemon);
+
+  return sortedPokemon.results;
+};

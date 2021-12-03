@@ -1,7 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Loader from 'react-loader-spinner';
-import { fetchFilteredPokemon, fetchPokemon, fetchPokemonTypes } from '../../services/fetchPokemon';
+import {
+  fetchFilteredPokemon,
+  fetchPokemon,
+  fetchPokemonTypes,
+  fetchSortedPokemon,
+} from '../../services/fetchPokemon';
 import PokemonList from '../../components/PokemonList/PokemonList';
 import Controls from '../../components/Controls/Controls';
 
@@ -10,6 +15,7 @@ export default function Compendium() {
   const [pokemon, setPokemon] = useState([]);
   const [allTypes, setAllTypes] = useState([]);
   const [selectedType, setSelectedType] = useState('all');
+  const [sortOrder, setSortOrder] = useState('');
 
   useEffect(() => {
     async function getPokemon() {
@@ -33,7 +39,6 @@ export default function Compendium() {
         setPokemon(selectedPokemon);
       } else {
         const pokedex = await fetchPokemon();
-        // console.log('pokedex', pokedex);
         setPokemon(pokedex);
       }
       setLoading(false);
@@ -42,6 +47,24 @@ export default function Compendium() {
     getSelectedPokemonType();
   }, [selectedType]);
 
+  useEffect(() => {
+    async function sortPokemon() {
+      if (!sortOrder) return;
+      setLoading(true);
+
+      if (sortOrder === 'desc') {
+        const sortedPokemon = await fetchSortedPokemon(sortOrder);
+        setPokemon(sortedPokemon);
+      } else {
+        const pokedex = await fetchPokemon();
+        setPokemon(pokedex);
+      }
+      setLoading(false);
+      setSortOrder(sortOrder);
+    }
+    sortPokemon();
+  }, [sortOrder]);
+
   return (
     <>
       <h1>Pokémon Compendium</h1>
@@ -49,6 +72,8 @@ export default function Compendium() {
         selectedType={selectedType}
         pokemonTypes={allTypes}
         filterChange={setSelectedType}
+        sortOrder={sortOrder}
+        sortChange={setSortOrder}
       />
       {loading && <Loader type="Puff" color="#00BFFF" height={80} width={80} />}
       {!loading && <PokemonList pokedex={pokemon} />}
