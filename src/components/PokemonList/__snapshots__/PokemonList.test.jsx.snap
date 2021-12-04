@@ -4,6 +4,7 @@ exports[`should render a single pokemon 1`] = `
 <ul
   aria-label="pokemon-list"
   class="pokemon-List"
+  style="background-color: grey; border: solid; max-width: 50%; justify-content: center;"
 >
   <li
     class="single-pokemon"
@@ -14,12 +15,14 @@ exports[`should render a single pokemon 1`] = `
       <img
         alt="undefined"
         src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
       />
       <div
         class="pokemon-detail"
       >
         <a
           href="https://www.pokemon.com/us/pokedex/butterfree"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
         />
         <p>
           Abilities:
@@ -55,12 +58,14 @@ exports[`should render a single pokemon 1`] = `
       <img
         alt="undefined"
         src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
       />
       <div
         class="pokemon-detail"
       >
         <a
           href="https://www.pokemon.com/us/pokedex/pidgeotto"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
         />
         <p>
           Abilities:
@@ -96,12 +101,14 @@ exports[`should render a single pokemon 1`] = `
       <img
         alt="undefined"
         src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
       />
       <div
         class="pokemon-detail"
       >
         <a
           href="https://www.pokemon.com/us/pokedex/arbok"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
         />
         <p>
           Abilities:
@@ -137,12 +144,14 @@ exports[`should render a single pokemon 1`] = `
       <img
         alt="undefined"
         src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
       />
       <div
         class="pokemon-detail"
       >
         <a
           href="https://www.pokemon.com/us/pokedex/jigglypuff"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
         />
         <p>
           Abilities:

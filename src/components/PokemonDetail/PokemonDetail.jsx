@@ -6,9 +6,31 @@ export default function PokemonDetail({ pokemon }) {
 
   return (
     <figure aria-label="pokemon">
-      <img src={pokemon.url_image} alt={`${pokemon.pokemon}`} />
+      <img
+        src={pokemon.url_image}
+        alt={`${pokemon.pokemon}`}
+        style={{
+          backgroundColor: 'black',
+          borderBlockColor: 'white',
+          border: 'dotted',
+          margin: '10px',
+          height: '200px',
+          width: '200px',
+        }}
+      />
       <div className="pokemon-detail">
-        <a href={pokemon.pokedex}>{pokemon.pokemon}</a>
+        <a
+          href={pokemon.pokedex}
+          style={{
+            border: 'solid',
+            color: 'lime',
+            justifyContent: 'center',
+            displayFlex: 'flex-wrap',
+            textAlign: 'center',
+          }}
+        >
+          {pokemon.pokemon}
+        </a>
         <p>
           Abilities:
           {pokemon.ability_1}

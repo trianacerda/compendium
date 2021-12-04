@@ -3,7 +3,17 @@ import PokemonDetail from '../PokemonDetail/PokemonDetail';
 
 export default function PokemonList({ pokedex }) {
   return (
-    <ul aria-label="pokemon-list" className="pokemon-List">
+    <ul
+      aria-label="pokemon-list"
+      className="pokemon-List"
+      style={{
+        backgroundColor: 'grey',
+        border: 'solid',
+        maxWidth: '50%',
+        displayFlex: 'flex',
+        justifyContent: 'center',
+      }}
+    >
       {pokedex.map((pokemon) => {
         return (
           <li className="single-pokemon" key={pokemon.id}>
