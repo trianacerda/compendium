@@ -29,7 +29,6 @@ export const fetchSortedPokemon = async (order) => {
   );
 
   const sortedPokemon = await response.json();
-  console.log('sorted', sortedPokemon);
 
   return sortedPokemon.results;
 };

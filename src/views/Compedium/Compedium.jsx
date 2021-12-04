@@ -42,7 +42,6 @@ export default function Compendium() {
         setPokemon(pokedex);
       }
       setLoading(false);
-      setSelectedType(selectedType);
     }
     getSelectedPokemonType();
   }, [selectedType]);
@@ -60,7 +59,6 @@ export default function Compendium() {
         setPokemon(pokedex);
       }
       setLoading(false);
-      setSortOrder(sortOrder);
     }
     sortPokemon();
   }, [sortOrder]);
