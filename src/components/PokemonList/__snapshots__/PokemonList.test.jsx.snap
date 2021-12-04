@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a single pokemon 1`] = `
+<ul
+  aria-label="pokemon-list"
+  class="pokemon-List"
+  style="background-color: grey; border: solid; max-width: 50%; justify-content: center;"
+>
+  <li
+    class="single-pokemon"
+  >
+    <figure
+      aria-label="pokemon"
+    >
+      <img
+        alt="undefined"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
+      />
+      <div
+        class="pokemon-detail"
+      >
+        <a
+          href="https://www.pokemon.com/us/pokedex/butterfree"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
+        />
+        <p>
+          Abilities:
+          /undefined
+        </p>
+        <p />
+        <p>
+          Weight: 
+          11
+        </p>
+        <p>
+          Shape: 
+          egg
+        </p>
+        <p>
+          Types:
+          bug
+          /flying
+        </p>
+        <p>
+          Speed:
+          11
+        </p>
+      </div>
+    </figure>
+  </li>
+  <li
+    class="single-pokemon"
+  >
+    <figure
+      aria-label="pokemon"
+    >
+      <img
+        alt="undefined"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
+      />
+      <div
+        class="pokemon-detail"
+      >
+        <a
+          href="https://www.pokemon.com/us/pokedex/pidgeotto"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
+        />
+        <p>
+          Abilities:
+          /undefined
+        </p>
+        <p />
+        <p>
+          Weight: 
+          100
+        </p>
+        <p>
+          Shape: 
+          upright
+        </p>
+        <p>
+          Types:
+          fairy
+          /fire
+        </p>
+        <p>
+          Speed:
+          55
+        </p>
+      </div>
+    </figure>
+  </li>
+  <li
+    class="single-pokemon"
+  >
+    <figure
+      aria-label="pokemon"
+    >
+      <img
+        alt="undefined"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
+      />
+      <div
+        class="pokemon-detail"
+      >
+        <a
+          href="https://www.pokemon.com/us/pokedex/arbok"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
+        />
+        <p>
+          Abilities:
+          /undefined
+        </p>
+        <p />
+        <p>
+          Weight: 
+          10
+        </p>
+        <p>
+          Shape: 
+          egg
+        </p>
+        <p>
+          Types:
+          psychic
+          /fire
+        </p>
+        <p>
+          Speed:
+          14
+        </p>
+      </div>
+    </figure>
+  </li>
+  <li
+    class="single-pokemon"
+  >
+    <figure
+      aria-label="pokemon"
+    >
+      <img
+        alt="undefined"
+        src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png"
+        style="background-color: black; border-block-color: white; border: dotted; margin: 10px; height: 200px; width: 200px;"
+      />
+      <div
+        class="pokemon-detail"
+      >
+        <a
+          href="https://www.pokemon.com/us/pokedex/jigglypuff"
+          style="border: solid; color: lime; justify-content: center; text-align: center;"
+        />
+        <p>
+          Abilities:
+          /undefined
+        </p>
+        <p />
+        <p>
+          Weight: 
+          20
+        </p>
+        <p>
+          Shape: 
+          egg
+        </p>
+        <p>
+          Types:
+          fairy
+        </p>
+        <p>
+          Speed:
+          99
+        </p>
+      </div>
+    </figure>
+  </li>
+</ul>
+`;
